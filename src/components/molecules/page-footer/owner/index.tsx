@@ -1,16 +1,14 @@
 'use client';
 
 import { Text } from '#/components/atoms/text';
+import { MonoForgeMonkeyIcon } from '#/components/common/MonoForgeLogo';
 
 export function FooterOwner() {
-
   return (
-    <div className="hidden h-full shrink-0 gap-sm desktop:flex">
-      <img
-        className="size-8 self-center"
-        src="/logo.svg"
-        alt="MonoForge"
-      />
+    <div className="hidden h-full shrink-0 gap-sm desktop:flex items-center">
+      <div className="size-8 self-center p-0.5 rounded-lg border border-neutral-900 bg-white shadow-2xs overflow-hidden flex items-center justify-center">
+        <MonoForgeMonkeyIcon className="w-full h-full" />
+      </div>
 
       <div className="flex flex-col h-full justify-center">
         <Text.Strong>MonoForge</Text.Strong>
