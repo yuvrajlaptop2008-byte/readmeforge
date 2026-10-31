@@ -11,6 +11,8 @@ import { ExportBar } from '#/components/developer/ExportBar';
 import { GitHubSyncModal } from '#/components/sync/GitHubSyncModal';
 import { CyberMonkeyCopilot } from '#/components/mascot/CyberMonkeyCopilot';
 import { MonoForgeMonkeyIcon } from '#/components/common/MonoForgeLogo';
+import { EditorSkeleton } from '#/components/developer/EditorSkeleton';
+import { TEMPLATES } from '#/lib/templates/catalog';
 import {
   Sparkles,
   Layers,
@@ -26,11 +28,7 @@ const Editor = dynamic(
   () => import('#/components/developer/Editor').then(mod => mod.Editor),
   {
     ssr: false,
-    loading: () => (
-      <div className="flex items-center justify-center h-full bg-white text-neutral-800 border-2 border-neutral-900 text-xs font-mono">
-        Loading Monaco Editor...
-      </div>
-    ),
+    loading: () => <EditorSkeleton />,
   }
 );
 
@@ -45,15 +43,24 @@ function LocalizedDeveloperContent() {
   const [isSyncModalOpen, setIsSyncModalOpen] = useState<boolean>(false);
   const [mobileTab, setMobileTab] = useState<'editor' | 'preview' | 'plugins' | 'copilot'>('editor');
 
-  // Decode config from URL if provided (?config=base64)
+  // Decode config or load template from URL if provided (?config=base64 or ?template=id)
   useEffect(() => {
     const configParam = searchParams?.get('config');
     if (configParam) {
       try {
         const decoded = decodeURIComponent(escape(atob(configParam)));
         setEntireConfig(decoded);
+        return;
       } catch {
         // Ignore invalid URL param
+      }
+    }
+
+    const templateParam = searchParams?.get('template');
+    if (templateParam) {
+      const found = TEMPLATES.find(t => t.id === templateParam);
+      if (found) {
+        setEntireConfig(found.config);
       }
     }
   }, [searchParams, setEntireConfig]);
@@ -303,15 +310,34 @@ function LocalizedDeveloperContent() {
   );
 }
 
+function DeveloperPageSkeleton() {
+  return (
+    <div className="h-screen bg-[#fafafa] flex flex-col p-2.5 sm:p-4 space-y-3 font-mono select-none">
+      <div className="h-12 w-full rounded-xl bg-white border-2 border-neutral-900 shadow-2xs flex items-center px-4 justify-between animate-pulse">
+        <div className="h-4 w-36 bg-neutral-200 rounded" />
+        <div className="flex gap-2">
+          <div className="h-7 w-24 bg-neutral-100 rounded border border-neutral-300" />
+          <div className="h-7 w-28 bg-[#ffe600] rounded border border-neutral-900" />
+        </div>
+      </div>
+      <div className="flex-1 flex gap-3 min-h-0 overflow-hidden">
+        <div className="w-72 h-full rounded-2xl bg-white border-2 border-neutral-900 shadow-2xs hidden md:flex flex-col p-4 space-y-3 animate-pulse shrink-0">
+          <div className="h-4 w-28 bg-neutral-200 rounded mb-2" />
+          <div className="h-10 w-full bg-neutral-100 rounded-xl border border-neutral-300" />
+          <div className="h-10 w-full bg-neutral-100 rounded-xl border border-neutral-300" />
+          <div className="h-10 w-full bg-neutral-100 rounded-xl border border-neutral-300" />
+        </div>
+        <div className="flex-1 h-full min-w-0">
+          <EditorSkeleton />
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function LocalizedDeveloperPage() {
   return (
-    <Suspense
-      fallback={
-        <div className="flex items-center justify-center h-screen bg-neutral-950 text-neutral-400 text-sm font-mono">
-          Loading Developer Mode...
-        </div>
-      }
-    >
+    <Suspense fallback={<DeveloperPageSkeleton />}>
       <LocalizedDeveloperContent />
     </Suspense>
   );

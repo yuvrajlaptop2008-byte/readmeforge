@@ -33,6 +33,7 @@ import { routing } from '#/i18n/routing';
 import { ThemeProvider } from '#/components/theme/ThemeProvider';
 import { ClickEffect } from '#/components/studio/ClickEffect';
 import { NomokeyCompanionWidget } from '#/components/studio/NomokeyCompanionWidget';
+import { RouteLoadingIndicator } from '#/components/common/RouteLoadingIndicator';
 import { StudioCursor } from '#/components/studio/StudioCursor';
 
 type LocaleLayoutProps = {
@@ -200,6 +201,7 @@ export default async function RootLayout({
       <body className="palette-surface min-h-screen bg-white text-neutral-900 font-sans selection:bg-[#ffe600] selection:text-neutral-950">
         <ThemeProvider>
           <NextIntlClientProvider locale={locale} messages={messages}>
+            <RouteLoadingIndicator />
             <ClickEffect />
             <StudioCursor />
             <NomokeyCompanionWidget />

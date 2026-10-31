@@ -19,6 +19,8 @@ import {
   RefreshCw,
   Trash2,
   Layers,
+  Share2,
+  Download,
 } from 'lucide-react';
 
 export { TEMPLATES, type TemplateItem } from '#/lib/templates/catalog';
@@ -57,6 +59,45 @@ const TEMPLATE_PREVIEWS: Record<string, string> = {
   'data-engineer-streaming': '/assets/breakout.svg',
   'game-dev-3d-graphics': '/assets/galaga.svg',
   'web3-solidity-defi': '/assets/characters/red-dragon.svg',
+  'cyber-monkey-dj-station': '/assets/monkey-cyber-dj.svg',
+  'cyber-monkey-hud': '/assets/monkey-code-hud.svg',
+  'pixel-desk-coffee-coder': '/assets/developer-desk.svg',
+  'matrix-green-cyber-runner': '/assets/terminal_animated.svg',
+  'builder-craftsman-smith': '/assets/cyber-monkey-mascot.svg',
+  'wizard-arcane-runic-mage': '/assets/characters/purple-monster.svg',
+  'ninja-shadow-katana-coder': '/assets/characters/ninja-turtle.svg',
+  'retro-game-boy-rom-hacker': '/assets/puzzle-bobble.svg',
+  'audio-synthesizer-vst-dsp': '/assets/telemetry-music-player.svg',
+  'autonomous-ai-agent-engineer': '/assets/agent-suite.svg',
+  'vector-database-rag-architect': '/assets/telemetry-languages-donut.svg',
+  'linux-kernel-ebpf-specialist': '/assets/telemetry-terminal-hud.svg',
+  'wasm-compiler-systems-dev': '/assets/developer-mode.svg',
+  'telemetry-sre-incident-commander': '/assets/telemetry-habits-radar.svg',
+  'devops-gitops-argo-flux-core': '/assets/telemetry-isocalendar-3d.svg',
+  'cloud-native-finops-engineer': '/assets/mock-streak-stats.svg',
+  'computational-biology-crispr': '/assets/characters/insectoid-warrior.svg',
+  'zero-trust-identity-architect': '/assets/telemetry-achievements-rack.svg',
+  'spatial-ar-vr-engine-dev': '/assets/animated-characters.svg',
+  'high-frequency-crypto-algo': '/assets/telemetry-pagespeed-audit.svg',
+  '3d-procedural-shader-artist': '/assets/characters/pink-wyvern.svg',
+  'frontend-microfrontends-architect': '/assets/bento-dashboard-header.svg',
+  'synthwave-80s-delorean-grid': '/assets/cyber-stickers-pack.svg',
+  'solar-punk-clean-tech-dev': '/assets/characters/dragonborn-paladin.svg',
+  'space-satellite-aerospace-dev': '/assets/roaming-bot.svg',
+  'quantum-cryptography-postquantum': '/assets/mock-github-stats.svg',
+  'neuro-tech-bci-developer': '/assets/telemetry-terminal-hud.svg',
+  'edge-iot-microcontrollers-rust': '/assets/bomberman.svg',
+  'decentralized-storage-ipfs-core': '/assets/breakout.svg',
+  'compiler-type-systems-researcher': '/assets/text-effects.svg',
+  'accessibility-a11y-wcag-champion': '/assets/about-me-telemetry.svg',
+  'embedded-automotive-autosar': '/assets/galaga.svg',
+  'devrel-advocate-speaker': '/assets/animated-heroes-squad.svg',
+  'green-software-carbon-engineer': '/assets/characters/blue-bean.svg',
+  'database-internals-storage-engine': '/assets/isometric-terminal.svg',
+  'mlops-feature-store-specialist': '/assets/telemetry-languages-donut.svg',
+  'pixel-craftsman': '/assets/developer-desk.svg',
+  'swiss-minimalist': '/assets/text-effects.svg',
+  'isometric-polyglot': '/assets/isometric-terminal.svg',
 };
 
 function renderModuleVisual(
@@ -458,6 +499,45 @@ export const TemplateGallery: React.FC = () => {
       setTimeout(() => {
         setCopiedPromptId(null);
       }, 2200);
+    }
+  };
+
+
+  // Download generated markdown file
+  const handleDownloadMarkdown = (tmplName: string, markdownContent: string) => {
+    try {
+      const blob = new Blob([markdownContent], { type: 'text/markdown;charset=utf-8;' });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = `${tmplName.toLowerCase().replace(/[^a-z0-9]+/g, '-')}-README.md`;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      URL.revokeObjectURL(url);
+      showToast(`Downloaded ${link.download}!`);
+      try {
+        confetti({ particleCount: 30, spread: 50, origin: { y: 0.7 } });
+      } catch {
+        // Ignored
+      }
+    } catch {
+      showToast('Download failed, copying markdown to clipboard instead.');
+      navigator.clipboard?.writeText(markdownContent);
+    }
+  };
+
+  // Share archetype via direct URL
+  const handleShareTemplate = (tmpl: TemplateItem) => {
+    if (typeof window !== 'undefined') {
+      const shareUrl = `${window.location.origin}${window.location.pathname}#template=${tmpl.id}`;
+      navigator.clipboard?.writeText(shareUrl);
+      showToast(`Direct link to "${tmpl.name}" copied!`);
+      try {
+        confetti({ particleCount: 20, spread: 45, origin: { y: 0.8 }, colors: ['#ffe600', '#06b6d4'] });
+      } catch {
+        // Ignored
+      }
     }
   };
 
@@ -1168,10 +1248,30 @@ export const TemplateGallery: React.FC = () => {
                       setTimeout(() => setCopiedMarkdown(false), 2000);
                     }
                   }}
-                  className="flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-mono font-bold border-2 border-neutral-900 bg-white hover:bg-neutral-100 text-neutral-950 shadow-2xs"
+                  className="flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-mono font-bold border-2 border-neutral-900 bg-white hover:bg-neutral-100 text-neutral-950 shadow-2xs cursor-pointer"
                 >
                   <Copy className="w-3.5 h-3.5" />
                   <span>Copy Markdown</span>
+                </button>
+
+                <button
+                  type="button"
+                  onClick={() => handleDownloadMarkdown(previewTemplate.name, previewMarkdown)}
+                  className="flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-mono font-bold border-2 border-neutral-900 bg-white hover:bg-neutral-100 text-neutral-950 shadow-2xs cursor-pointer"
+                  title="Download README.md"
+                >
+                  <Download className="w-3.5 h-3.5 text-cyan-600" />
+                  <span>Download .md</span>
+                </button>
+
+                <button
+                  type="button"
+                  onClick={() => handleShareTemplate(previewTemplate)}
+                  className="flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-mono font-bold border-2 border-neutral-900 bg-white hover:bg-neutral-100 text-neutral-950 shadow-2xs cursor-pointer"
+                  title="Share direct link to this archetype"
+                >
+                  <Share2 className="w-3.5 h-3.5 text-amber-500" />
+                  <span>Share</span>
                 </button>
               </div>
 

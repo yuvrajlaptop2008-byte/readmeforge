@@ -140,23 +140,6 @@ export function TopNav() {
             <span className="xl:hidden">ANIMATE</span>
           </Link>
 
-          {/* Info & Guide Hub */}
-          <Link
-            href="/animator"
-            onClick={() => setMobileMenuOpen(false)}
-            className={`flex items-center justify-between p-3 rounded-xl border-2 font-mono text-xs font-black transition-all ${
-              isAnimator
-                ? 'bg-[#ffe600] text-neutral-950 border-neutral-900 shadow-[2px_2px_0px_#18181b]'
-                : 'bg-white text-neutral-800 border-neutral-900 hover:bg-[#ffe600]'
-            }`}
-          >
-            <span className="flex items-center gap-2">
-              <Film className="w-4 h-4" />
-              <span>SVG ANIMATOR</span>
-            </span>
-            <span className="text-[10px] text-neutral-500">60FPS</span>
-          </Link>
-
           <Link
             href="/info"
             data-cursor-label="GUIDE"

@@ -94,7 +94,7 @@ export function buildRichPrompt(item: {
   ].join('\n');
 }
 
-const RAW_TEMPLATES: TemplateItem[] = [
+const RAW_TEMPLATES: (Omit<TemplateItem, 'prompt'> & { prompt?: string })[] = [
 {
     id: 'minimalist',
     name: 'Minimalist Clean',
@@ -3899,6 +3899,1954 @@ const RAW_TEMPLATES: TemplateItem[] = [
       ],
     },
   },
+  {
+    "id": "autonomous-ai-agent-engineer",
+    "name": "Autonomous AI Agent & LLM Orchestrator",
+    "description": "Multi-agent frameworks, tool use, Model Context Protocol (MCP), and production LLM orchestration with evaluation benchmarks.",
+    "category": "AI & Data",
+    "accent": "#8b5cf6",
+    "config": {
+      "version": "1.0.0",
+      "title": "Autonomous AI Agent & LLM Orchestrator",
+      "settings": {
+        "user": {
+          "github": "octocat",
+          "name": "Agentic Architect",
+          "role": "Autonomous AI Systems & MCP Engineer",
+          "bio": "Building self-directing agent swarms, tool-use evaluation pipelines, and Model Context Protocol servers.",
+          "location": "San Francisco, CA",
+          "pronouns": "they/them",
+          "status": "Orchestrating agent workflows with LangGraph & CrewAI"
+        },
+        "theme": "dark",
+        "accentColor": "#8b5cf6",
+        "badgeStyle": "for-the-badge",
+        "align": "left"
+      },
+      "sections": [
+        {
+          "id": "sec-agent-capsule",
+          "type": "capsule-banner",
+          "props": {
+            "content": {
+              "text": "AUTONOMOUS AGENTS // MCP ENGINE",
+              "color": "8b5cf6",
+              "style": "waving",
+              "animation": "fadeIn"
+            },
+            "styles": {},
+            "state": "default"
+          }
+        },
+        {
+          "id": "sec-agent-mascot",
+          "type": "mascot-bio",
+          "props": {
+            "content": {
+              "theme": "cyber-bot",
+              "greeting": "Systems operational. Multi-agent swarms standing by.",
+              "speed": "normal"
+            },
+            "styles": {},
+            "state": "default"
+          }
+        },
+        {
+          "id": "sec-agent-langs",
+          "type": "github-readme-stats",
+          "props": {
+            "content": {
+              showIcons: true,
+              "theme": "tokyonight",
+              includeAllCommits: true
+            },
+            "styles": {},
+            "state": "default"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "vector-database-rag-architect",
+    "name": "Vector Database & RAG Search Architect",
+    "description": "Hybrid dense-sparse retrieval, HNSW vector indexing, graph RAG, and low-latency semantic search infrastructure.",
+    "category": "AI & Data",
+    "accent": "#06b6d4",
+    "config": {
+      "version": "1.0.0",
+      "title": "Vector Database & RAG Search Architect",
+      "settings": {
+        "user": {
+          "github": "octocat",
+          "name": "Vector Pioneer",
+          "role": "High-Dimensional Vector DB & Hybrid Search Specialist",
+          "bio": "Architecting billion-scale vector indexes with Qdrant, Milvus, and pgvector. Low-latency hybrid RAG.",
+          "location": "Seattle, WA",
+          "pronouns": "she/her",
+          "status": "Scaling sub-millisecond HNSW graph queries"
+        },
+        "theme": "dark",
+        "accentColor": "#06b6d4",
+        "badgeStyle": "for-the-badge",
+        "align": "left"
+      },
+      "sections": [
+        {
+          "id": "sec-rag-capsule",
+          "type": "capsule-banner",
+          "props": {
+            "content": {
+              "text": "VECTOR SEARCH // HYBRID RAG ENGINE",
+              "color": "06b6d4",
+              "style": "geometric",
+              "animation": "fadeIn"
+            },
+            "styles": {},
+            "state": "default"
+          }
+        },
+        {
+          "id": "sec-rag-stats",
+          "type": "github-readme-stats",
+          "props": {
+            "content": {
+              showIcons: true,
+              "theme": "radical",
+              includeAllCommits: true
+            },
+            "styles": {},
+            "state": "default"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "wasm-compiler-systems-dev",
+    "name": "WebAssembly & Compiler Systems Hacker",
+    "description": "LLVM backends, WebAssembly (Wasm/WASI) component model, and micro-virtual machines running near-native code on the edge.",
+    "category": "Systems & Low-Level",
+    "accent": "#6366f1",
+    "config": {
+      "version": "1.0.0",
+      "title": "WebAssembly & Compiler Systems Hacker",
+      "settings": {
+        "user": {
+          "github": "octocat",
+          "name": "Wasm Virtuoso",
+          "role": "Wasm/WASI Micro-VMs & Compiler Engineer",
+          "bio": "Compiling systems to WebAssembly. Building sandboxed edge runtimes with Wasmtime, Wasmer, and LLVM.",
+          "location": "Munich, Germany",
+          "pronouns": "he/him",
+          "status": "Hacking on WASI 0.2 component model interfaces"
+        },
+        "theme": "dark",
+        "accentColor": "#6366f1",
+        "badgeStyle": "for-the-badge",
+        "align": "left"
+      },
+      "sections": [
+        {
+          "id": "sec-wasm-typing",
+          "type": "readme-typing-svg",
+          "props": {
+            "content": {
+              "lines": [
+                "Compiling C/Rust to WebAssembly component modules...",
+                "Executing sandbox edge runtime at native speeds...",
+                "Zero-overhead memory bounds checking verified."
+              ],
+              "color": "6366f1",
+              "font": "Fira Code"
+            },
+            "styles": {},
+            "state": "default"
+          }
+        },
+        {
+          "id": "sec-wasm-streak",
+          "type": "github-readme-streak-stats",
+          "props": {
+            "content": {
+              "theme": "tokyonight",
+              hideBorder: false
+            },
+            "styles": {},
+            "state": "default"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "devrel-advocate-speaker",
+    "name": "Developer Relations & Community Advocate",
+    "description": "Tech conference keynote speaker, open-source evangelism, interactive tutorials, and developer community architecture.",
+    "category": "Creative & Design",
+    "accent": "#f59e0b",
+    "config": {
+      "version": "1.0.0",
+      "title": "Developer Relations & Community Advocate",
+      "settings": {
+        "user": {
+          "github": "octocat",
+          "name": "Community Champion",
+          "role": "VP of Developer Experience & Keynote Speaker",
+          "bio": "Bridging engineers, products, and communities worldwide. 50+ global keynotes and open-source tutorials.",
+          "location": "London, UK",
+          "pronouns": "they/them",
+          "status": "Speaking at next month's Global Open Source Summit"
+        },
+        "theme": "dark",
+        "accentColor": "#f59e0b",
+        "badgeStyle": "for-the-badge",
+        "align": "center"
+      },
+      "sections": [
+        {
+          "id": "sec-devrel-capsule",
+          "type": "capsule-banner",
+          "props": {
+            "content": {
+              "text": "DEV ADVOCACY // COMMUNITY & CODE",
+              "color": "f59e0b",
+              "style": "waving",
+              "animation": "fadeIn"
+            },
+            "styles": {},
+            "state": "default"
+          }
+        },
+        {
+          "id": "sec-devrel-trophy",
+          "type": "github-profile-trophy",
+          "props": {
+            "content": {
+              "theme": "matrix",
+              "column": 6,
+              "row": 1
+            },
+            "styles": {},
+            "state": "default"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "linux-kernel-ebpf-specialist",
+    "name": "Linux Kernel & eBPF Observability Hacker",
+    "description": "In-kernel tracing, XDP high-throughput packet filtering, BCC/libbpf tooling, and kernel micro-benchmarking.",
+    "category": "Systems & Low-Level",
+    "accent": "#ef4444",
+    "config": {
+      "version": "1.0.0",
+      "title": "Linux Kernel & eBPF Observability Hacker",
+      "settings": {
+        "user": {
+          "github": "octocat",
+          "name": "Kernel Specter",
+          "role": "eBPF Systems Tracing & Kernel Networking Engineer",
+          "bio": "Hooking kprobes and tracepoints with eBPF. 100Gbps line-rate packet processing with XDP and Cilium.",
+          "location": "Austin, TX",
+          "pronouns": "he/him",
+          "status": "Verifying eBPF verifier bounds for custom kernel bytecode"
+        },
+        "theme": "dark",
+        "accentColor": "#ef4444",
+        "badgeStyle": "for-the-badge",
+        "align": "left"
+      },
+      "sections": [
+        {
+          "id": "sec-ebpf-typing",
+          "type": "readme-typing-svg",
+          "props": {
+            "content": {
+              "lines": [
+                "Attaching eBPF kprobe to sys_enter_connect...",
+                "Filtering 10,000,000 pkts/sec at XDP driver layer...",
+                "Zero packet drop rate confirmed."
+              ],
+              "color": "ef4444",
+              "font": "Fira Code"
+            },
+            "styles": {},
+            "state": "default"
+          }
+        },
+        {
+          "id": "sec-ebpf-stats",
+          "type": "github-readme-stats",
+          "props": {
+            "content": {
+              showIcons: true,
+              "theme": "dark",
+              includeAllCommits: true
+            },
+            "styles": {},
+            "state": "default"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "spatial-ar-vr-engine-dev",
+    "name": "AR/VR & Spatial Metaverse Engineer",
+    "description": "Stereoscopic rendering, real-time spatial mesh anchors, WebXR shaders, and Apple VisionOS immersive spaces.",
+    "category": "Mobile & Game",
+    "accent": "#a855f7",
+    "config": {
+      "version": "1.0.0",
+      "title": "AR/VR & Spatial Metaverse Engineer",
+      "settings": {
+        "user": {
+          "github": "octocat",
+          "name": "Spatial Visionary",
+          "role": "Immersive Computing & WebXR Graphics Engineer",
+          "bio": "Building real-time spatial computing realities. Three.js, WebXR, Unity HDRP, and VisionOS RealityKit.",
+          "location": "Los Angeles, CA",
+          "pronouns": "they/them",
+          "status": "Generating 90fps photorealistic neural radiance fields"
+        },
+        "theme": "dark",
+        "accentColor": "#a855f7",
+        "badgeStyle": "for-the-badge",
+        "align": "center"
+      },
+      "sections": [
+        {
+          "id": "sec-spatial-capsule",
+          "type": "capsule-banner",
+          "props": {
+            "content": {
+              "text": "SPATIAL AR/VR // REALITYKIT & WEBXR",
+              "color": "a855f7",
+              "style": "waving",
+              "animation": "fadeIn"
+            },
+            "styles": {},
+            "state": "default"
+          }
+        },
+        {
+          "id": "sec-spatial-snake",
+          "type": "snk",
+          "props": {
+            "content": {
+              "colorDots": "#161b22,#0e4429,#006d32,#26a641,#39d353",
+              "colorSnake": "#a855f7"
+            },
+            "styles": {},
+            "state": "default"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "high-frequency-crypto-algo",
+    "name": "Quantitative & High-Frequency Crypto Trader",
+    "description": "Orderbook L2/L3 streaming, arbitrage math, FPGA tick-to-trade accelerators, and sub-microsecond matching engines.",
+    "category": "Web & Full-Stack",
+    "accent": "#10b981",
+    "config": {
+      "version": "1.0.0",
+      "title": "Quantitative & High-Frequency Crypto Trader",
+      "settings": {
+        "user": {
+          "github": "octocat",
+          "name": "Quant Striker",
+          "role": "Low-Latency Market Making & Quant Algorithmic Dev",
+          "bio": "Sub-microsecond trading engines in modern C++23 & Rust. Statistical arbitrage and cross-venue latency arb.",
+          "location": "Chicago, IL",
+          "pronouns": "he/him",
+          "status": "Benchmarking sub-400ns tick-to-trade order loops"
+        },
+        "theme": "dark",
+        "accentColor": "#10b981",
+        "badgeStyle": "for-the-badge",
+        "align": "left"
+      },
+      "sections": [
+        {
+          "id": "sec-quant-stats",
+          "type": "github-readme-stats",
+          "props": {
+            "content": {
+              showIcons: true,
+              "theme": "highcontrast",
+              includeAllCommits: true
+            },
+            "styles": {},
+            "state": "default"
+          }
+        },
+        {
+          "id": "sec-quant-streak",
+          "type": "github-readme-streak-stats",
+          "props": {
+            "content": {
+              "theme": "tokyonight",
+              hideBorder: false
+            },
+            "styles": {},
+            "state": "default"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "computational-biology-crispr",
+    "name": "Computational CRISPR & Genomic Data Scientist",
+    "description": "Off-target cleavage neural networks, Nextflow NGS pipelines, structural biology alphafold docking, and bio-graphs.",
+    "category": "AI & Data",
+    "accent": "#14b8a6",
+    "config": {
+      "version": "1.0.0",
+      "title": "Computational CRISPR & Genomic Data Scientist",
+      "settings": {
+        "user": {
+          "github": "octocat",
+          "name": "Bioinformatics Hacker",
+          "role": "Genome Engineering & Deep Bio-Informatics Lead",
+          "bio": "Designing high-fidelity CRISPR guide RNAs with machine learning. Petabyte-scale Nextflow genomic pipelines.",
+          "location": "Cambridge, MA",
+          "pronouns": "she/her",
+          "status": "Analyzing single-cell multi-omic RNA chromatin graphs"
+        },
+        "theme": "dark",
+        "accentColor": "#14b8a6",
+        "badgeStyle": "for-the-badge",
+        "align": "left"
+      },
+      "sections": [
+        {
+          "id": "sec-bio-capsule",
+          "type": "capsule-banner",
+          "props": {
+            "content": {
+              "text": "COMPUTATIONAL BIOLOGY // CRISPR GENOMICS",
+              "color": "14b8a6",
+              "style": "geometric",
+              "animation": "fadeIn"
+            },
+            "styles": {},
+            "state": "default"
+          }
+        },
+        {
+          "id": "sec-bio-stats",
+          "type": "github-readme-stats",
+          "props": {
+            "content": {
+              showIcons: true,
+              "theme": "nord",
+              includeAllCommits: true
+            },
+            "styles": {},
+            "state": "default"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "cloud-native-finops-engineer",
+    "name": "Cloud Native FinOps & Cost Optimizer",
+    "description": "Multi-cloud kubernetes spot orchestration, cost allocation tags, Kubecost tuning, and automated rightsizing.",
+    "category": "Security & Cloud",
+    "accent": "#22c55e",
+    "config": {
+      "version": "1.0.0",
+      "title": "Cloud Native FinOps & Cost Optimizer",
+      "settings": {
+        "user": {
+          "github": "octocat",
+          "name": "Cloud Economizer",
+          "role": "Cloud FinOps Architect & Kubernetes Efficiency Lead",
+          "bio": "Slashing AWS/GCP bills by 60% with zero downtime. Automated Spot draining, Karpenter, and Kubecost governance.",
+          "location": "Toronto, Canada",
+          "pronouns": "he/him",
+          "status": "Optimizing multi-cluster node autoscaling thresholds"
+        },
+        "theme": "dark",
+        "accentColor": "#22c55e",
+        "badgeStyle": "for-the-badge",
+        "align": "left"
+      },
+      "sections": [
+        {
+          "id": "sec-finops-capsule",
+          "type": "capsule-banner",
+          "props": {
+            "content": {
+              "text": "FINOPS ARCHITECT // CLUSTER COST OPTIMIZER",
+              "color": "22c55e",
+              "style": "waving",
+              "animation": "fadeIn"
+            },
+            "styles": {},
+            "state": "default"
+          }
+        },
+        {
+          "id": "sec-finops-streak",
+          "type": "github-readme-streak-stats",
+          "props": {
+            "content": {
+              "theme": "radical",
+              hideBorder: false
+            },
+            "styles": {},
+            "state": "default"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "accessibility-a11y-wcag-champion",
+    "name": "Digital Accessibility & Inclusive UX Specialist",
+    "description": "WCAG 2.2 AAA audit certification, screen reader kinematics, assistive ARIA landmarks, and keyboard navigation.",
+    "category": "Creative & Design",
+    "accent": "#3b82f6",
+    "config": {
+      "version": "1.0.0",
+      "title": "Digital Accessibility & Inclusive UX Specialist",
+      "settings": {
+        "user": {
+          "github": "octocat",
+          "name": "Inclusive Technologist",
+          "role": "Staff Accessibility Engineer & WCAG Auditor",
+          "bio": "Making software radically accessible for everyone. Screen reader engineering, VoiceOver, NVDA, and WCAG AAA.",
+          "location": "Amsterdam, Netherlands",
+          "pronouns": "they/them",
+          "status": "Auditing design system components for tactile focus rings"
+        },
+        "theme": "light",
+        "accentColor": "#3b82f6",
+        "badgeStyle": "for-the-badge",
+        "align": "left"
+      },
+      "sections": [
+        {
+          "id": "sec-a11y-typing",
+          "type": "readme-typing-svg",
+          "props": {
+            "content": {
+              "lines": [
+                "Enforcing WCAG 2.2 AAA color contrast compliance...",
+                "Optimizing keyboard focus rings and ARIA live regions...",
+                "Ensuring 100% accessible digital experiences for all."
+              ],
+              "color": "3b82f6",
+              "font": "Fira Code"
+            },
+            "styles": {},
+            "state": "default"
+          }
+        },
+        {
+          "id": "sec-a11y-stats",
+          "type": "github-readme-stats",
+          "props": {
+            "content": {
+              showIcons: true,
+              "theme": "default",
+              includeAllCommits: true
+            },
+            "styles": {},
+            "state": "default"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "embedded-automotive-autosar",
+    "name": "Automotive Embedded & Autonomous Vehicle Systems",
+    "description": "AUTOSAR Classic/Adaptive, ISO 26262 ASIL-D safety lifecycle, CAN/CAN-FD bus analyzers, and RTOS firmware.",
+    "category": "Systems & Low-Level",
+    "accent": "#ea580c",
+    "config": {
+      "version": "1.0.0",
+      "title": "Automotive Embedded & Autonomous Vehicle Systems",
+      "settings": {
+        "user": {
+          "github": "octocat",
+          "name": "Automotive Engineer",
+          "role": "Autonomous Driving Firmware & AUTOSAR Specialist",
+          "bio": "Mission-critical automotive software. ISO 26262 ASIL-D certified safety systems, CAN-FD buses, and QNX RTOS.",
+          "location": "Stuttgart, Germany",
+          "pronouns": "he/him",
+          "status": "Running hardware-in-the-loop (HIL) brake ECU test suites"
+        },
+        "theme": "dark",
+        "accentColor": "#ea580c",
+        "badgeStyle": "for-the-badge",
+        "align": "left"
+      },
+      "sections": [
+        {
+          "id": "sec-auto-capsule",
+          "type": "capsule-banner",
+          "props": {
+            "content": {
+              "text": "AUTOSAR // ASIL-D AUTOMOTIVE SAFETY",
+              "color": "ea580c",
+              "style": "geometric",
+              "animation": "fadeIn"
+            },
+            "styles": {},
+            "state": "default"
+          }
+        },
+        {
+          "id": "sec-auto-stats",
+          "type": "github-readme-stats",
+          "props": {
+            "content": {
+              showIcons: true,
+              "theme": "dark",
+              includeAllCommits: true
+            },
+            "styles": {},
+            "state": "default"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "audio-synthesizer-vst-dsp",
+    "name": "Synthesizer & Audio DSP Plugin Developer",
+    "description": "JUCE C++ framework, VST3/AU audio plugins, wavetable oscillator math, IIR/FIR filters, and spectral FFT analyzers.",
+    "category": "Creative & Design",
+    "accent": "#ec4899",
+    "config": {
+      "version": "1.0.0",
+      "title": "Synthesizer & Audio DSP Plugin Developer",
+      "settings": {
+        "user": {
+          "github": "octocat",
+          "name": "Sound Synthesist",
+          "role": "DSP Audio Engineer & VST3/JUCE Developer",
+          "bio": "Designing next-generation digital synthesizers and audio effects. JUCE, SIMD vectorized filters, and zero-latency FFT.",
+          "location": "Berlin, Germany",
+          "pronouns": "they/them",
+          "status": "Calibrating ladder filter nonlinear resonance saturation"
+        },
+        "theme": "dark",
+        "accentColor": "#ec4899",
+        "badgeStyle": "for-the-badge",
+        "align": "center"
+      },
+      "sections": [
+        {
+          "id": "sec-dsp-capsule",
+          "type": "capsule-banner",
+          "props": {
+            "content": {
+              "text": "AUDIO DSP // JUCE VST3 SYNTHESIZERS",
+              "color": "ec4899",
+              "style": "waving",
+              "animation": "fadeIn"
+            },
+            "styles": {},
+            "state": "default"
+          }
+        },
+        {
+          "id": "sec-dsp-stats",
+          "type": "github-readme-stats",
+          "props": {
+            "content": {
+              showIcons: true,
+              "theme": "synthwave",
+              includeAllCommits: true
+            },
+            "styles": {},
+            "state": "default"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "retro-game-boy-rom-hacker",
+    "name": "Retro Game Boy Assembly & Homebrew Hacker",
+    "description": "Z80 SM83 assembly, pixel sprite banks, tilemap scanline interrupts, and custom Game Boy cartridge homebrew.",
+    "category": "Mobile & Game",
+    "accent": "#84cc16",
+    "config": {
+      "version": "1.0.0",
+      "title": "Retro Game Boy Assembly & Homebrew Hacker",
+      "settings": {
+        "user": {
+          "github": "octocat",
+          "name": "Chiptune Hero",
+          "role": "Game Boy Assembly & Homebrew Hardware Dev",
+          "bio": "Writing 8-bit assembly games for the Nintendo Game Boy. Tilemap registers, custom MBC memory mappers, and chiptunes.",
+          "location": "Kyoto, Japan",
+          "pronouns": "he/him",
+          "status": "Fitting entire platformer mechanics into 32KB ROM"
+        },
+        "theme": "dark",
+        "accentColor": "#84cc16",
+        "badgeStyle": "for-the-badge",
+        "align": "center"
+      },
+      "sections": [
+        {
+          "id": "sec-gb-snake",
+          "type": "snk",
+          "props": {
+            "content": {
+              "colorDots": "#0f380f,#306230,#8bac0f,#9bbc0f",
+              "colorSnake": "#84cc16"
+            },
+            "styles": {},
+            "state": "default"
+          }
+        },
+        {
+          "id": "sec-gb-stats",
+          "type": "github-readme-stats",
+          "props": {
+            "content": {
+              showIcons: true,
+              "theme": "matrix",
+              includeAllCommits: true
+            },
+            "styles": {},
+            "state": "default"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "zero-trust-identity-architect",
+    "name": "Zero-Trust Identity & IAM Architect",
+    "description": "OIDC/OAuth 2.1, Passkeys/WebAuthn, SPIFFE/SPIRE workload identity, and adaptive risk-based access control.",
+    "category": "Security & Cloud",
+    "accent": "#0284c7",
+    "config": {
+      "version": "1.0.0",
+      "title": "Zero-Trust Identity & IAM Architect",
+      "settings": {
+        "user": {
+          "github": "octocat",
+          "name": "Identity Sentinel",
+          "role": "Principal Identity & Zero-Trust Security Architect",
+          "bio": "Never trust, always verify. Designing cryptographic workload identities, FIDO2 passkeys, and micro-segmented zero trust.",
+          "location": "Washington, D.C.",
+          "pronouns": "she/her",
+          "status": "Deploying SPIFFE mTLS federation across multi-cloud meshes"
+        },
+        "theme": "dark",
+        "accentColor": "#0284c7",
+        "badgeStyle": "for-the-badge",
+        "align": "left"
+      },
+      "sections": [
+        {
+          "id": "sec-iam-capsule",
+          "type": "capsule-banner",
+          "props": {
+            "content": {
+              "text": "ZERO-TRUST // WORKLOAD IDENTITY & WEBAUTHN",
+              "color": "0284c7",
+              "style": "geometric",
+              "animation": "fadeIn"
+            },
+            "styles": {},
+            "state": "default"
+          }
+        },
+        {
+          "id": "sec-iam-streak",
+          "type": "github-readme-streak-stats",
+          "props": {
+            "content": {
+              "theme": "tokyonight",
+              hideBorder: false
+            },
+            "styles": {},
+            "state": "default"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "neuro-tech-bci-developer",
+    "name": "Brain-Computer Interface & NeuroTech Coder",
+    "description": "EEG signal processing, real-time Fourier spectrograms, BrainFlow API, and neural motor decoding models.",
+    "category": "AI & Data",
+    "accent": "#d946ef",
+    "config": {
+      "version": "1.0.0",
+      "title": "Brain-Computer Interface & NeuroTech Coder",
+      "settings": {
+        "user": {
+          "github": "octocat",
+          "name": "Neural Decoder",
+          "role": "NeuroTechnology & BCI Signal Processing Specialist",
+          "bio": "Decoding thoughts into computer actions. 16-channel EEG telemetry, wavelet transforms, and neural interface ML.",
+          "location": "Zurich, Switzerland",
+          "pronouns": "they/them",
+          "status": "Filtering 250Hz alpha & beta brainwave band harmonics"
+        },
+        "theme": "dark",
+        "accentColor": "#d946ef",
+        "badgeStyle": "for-the-badge",
+        "align": "left"
+      },
+      "sections": [
+        {
+          "id": "sec-bci-typing",
+          "type": "readme-typing-svg",
+          "props": {
+            "content": {
+              "lines": [
+                "Acquiring 16-channel EEG brainwave stream via LSL...",
+                "Executing real-time bandpass filter 0.5Hz - 50Hz...",
+                "Decoding intended motor movement with 94.8% accuracy."
+              ],
+              "color": "d946ef",
+              "font": "Fira Code"
+            },
+            "styles": {},
+            "state": "default"
+          }
+        },
+        {
+          "id": "sec-bci-stats",
+          "type": "github-readme-stats",
+          "props": {
+            "content": {
+              showIcons: true,
+              "theme": "dracula",
+              includeAllCommits: true
+            },
+            "styles": {},
+            "state": "default"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "compiler-type-systems-researcher",
+    "name": "Type Systems & Formal Verification Mathematician",
+    "description": "Coq / Lean 4 theorem proving, dependent types, Curry-Howard isomorphism, and verified compiler passes.",
+    "category": "Minimal & Academic",
+    "accent": "#475569",
+    "config": {
+      "version": "1.0.0",
+      "title": "Type Systems & Formal Verification Mathematician",
+      "settings": {
+        "user": {
+          "github": "octocat",
+          "name": "Formal Logician",
+          "role": "Programming Language Theory (PLT) & Formal Proofs Lead",
+          "bio": "Proving software correctness with Lean 4 and Coq. Dependent type theories, category theory, and verified systems.",
+          "location": "Oxford, UK",
+          "pronouns": "she/her",
+          "status": "Machine-checking constructive proofs for memory safety"
+        },
+        "theme": "light",
+        "accentColor": "#475569",
+        "badgeStyle": "for-the-badge",
+        "align": "left"
+      },
+      "sections": [
+        {
+          "id": "sec-type-capsule",
+          "type": "capsule-banner",
+          "props": {
+            "content": {
+              "text": "FORMAL VERIFICATION // LEAN 4 & COQ",
+              "color": "475569",
+              "style": "geometric",
+              "animation": "fadeIn"
+            },
+            "styles": {},
+            "state": "default"
+          }
+        },
+        {
+          "id": "sec-type-stats",
+          "type": "github-readme-stats",
+          "props": {
+            "content": {
+              showIcons: true,
+              "theme": "default",
+              includeAllCommits: true
+            },
+            "styles": {},
+            "state": "default"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "green-software-carbon-engineer",
+    "name": "Green Software & Sustainable Computing Engineer",
+    "description": "SCI carbon intensity algorithms, eco-friendly server scheduler, JoularJX energy profiler, and carbon-aware execution.",
+    "category": "Security & Cloud",
+    "accent": "#16a34a",
+    "config": {
+      "version": "1.0.0",
+      "title": "Green Software & Sustainable Computing Engineer",
+      "settings": {
+        "user": {
+          "github": "octocat",
+          "name": "Carbon Optimizer",
+          "role": "Green Software Architect & Sustainable Compute Lead",
+          "bio": "Measuring and reducing computing carbon footprints. Carbon-aware cron batching, Joules/op metrics, and energy budgets.",
+          "location": "Stockholm, Sweden",
+          "pronouns": "they/them",
+          "status": "Scheduling background compute to match peak wind energy"
+        },
+        "theme": "light",
+        "accentColor": "#16a34a",
+        "badgeStyle": "for-the-badge",
+        "align": "left"
+      },
+      "sections": [
+        {
+          "id": "sec-green-capsule",
+          "type": "capsule-banner",
+          "props": {
+            "content": {
+              "text": "GREEN SOFTWARE // CARBON-AWARE COMPUTE",
+              "color": "16a34a",
+              "style": "waving",
+              "animation": "fadeIn"
+            },
+            "styles": {},
+            "state": "default"
+          }
+        },
+        {
+          "id": "sec-green-stats",
+          "type": "github-readme-stats",
+          "props": {
+            "content": {
+              showIcons: true,
+              "theme": "gruvbox",
+              includeAllCommits: true
+            },
+            "styles": {},
+            "state": "default"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "decentralized-storage-ipfs-core",
+    "name": "Decentralized Storage & P2P Protocols Engineer",
+    "description": "IPFS unixfs, libp2p Kademlia DHT routing, Filecoin proof-of-spacetime, and peer-to-peer data distribution.",
+    "category": "Web & Full-Stack",
+    "accent": "#0ea5e9",
+    "config": {
+      "version": "1.0.0",
+      "title": "Decentralized Storage & P2P Protocols Engineer",
+      "settings": {
+        "user": {
+          "github": "octocat",
+          "name": "P2P Architect",
+          "role": "Distributed Hash Tables & Decentralized Storage Dev",
+          "bio": "Building the resilient peer-to-peer web. Libp2p protocol multiplexing, Content Addressing (CIDs), and BitTorrent.",
+          "location": "Lisbon, Portugal",
+          "pronouns": "he/him",
+          "status": "Benchmarking BitSwap block retrieval latency over WAN"
+        },
+        "theme": "dark",
+        "accentColor": "#0ea5e9",
+        "badgeStyle": "for-the-badge",
+        "align": "left"
+      },
+      "sections": [
+        {
+          "id": "sec-p2p-capsule",
+          "type": "capsule-banner",
+          "props": {
+            "content": {
+              "text": "PEER-TO-PEER // LIBP2P & IPFS PROTOCOLS",
+              "color": "0ea5e9",
+              "style": "geometric",
+              "animation": "fadeIn"
+            },
+            "styles": {},
+            "state": "default"
+          }
+        },
+        {
+          "id": "sec-p2p-streak",
+          "type": "github-readme-streak-stats",
+          "props": {
+            "content": {
+              "theme": "tokyonight",
+              hideBorder: false
+            },
+            "styles": {},
+            "state": "default"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "edge-iot-microcontrollers-rust",
+    "name": "Edge IoT & Bare-Metal Rust Hacker",
+    "description": "ESP32 / STM32 no_std embedded Rust, DMA peripheral drivers, LoRaWAN mesh communication, and low-power sleep cycles.",
+    "category": "Systems & Low-Level",
+    "accent": "#f97316",
+    "config": {
+      "version": "1.0.0",
+      "title": "Edge IoT & Bare-Metal Rust Hacker",
+      "settings": {
+        "user": {
+          "github": "octocat",
+          "name": "Bare-Metal Rustacean",
+          "role": "Embedded Systems & Bare-Metal Rust Hacker",
+          "bio": "Writing safe no_std Rust on microcontrollers. Zero dynamic allocations, DMA SPI transfers, and sub-microamp sleep.",
+          "location": "Oslo, Norway",
+          "pronouns": "he/him",
+          "status": "Running 2-year battery life sensor node over LoRaWAN"
+        },
+        "theme": "dark",
+        "accentColor": "#f97316",
+        "badgeStyle": "for-the-badge",
+        "align": "left"
+      },
+      "sections": [
+        {
+          "id": "sec-iot-typing",
+          "type": "readme-typing-svg",
+          "props": {
+            "content": {
+              "lines": [
+                "Booting bare-metal cortex-m4 microcontroller...",
+                "Configuring direct memory access (DMA) buffers...",
+                "Broadcasting encrypted telemetry over LoRaWAN mesh."
+              ],
+              "color": "f97316",
+              "font": "Fira Code"
+            },
+            "styles": {},
+            "state": "default"
+          }
+        },
+        {
+          "id": "sec-iot-stats",
+          "type": "github-readme-stats",
+          "props": {
+            "content": {
+              showIcons: true,
+              "theme": "tokyonight",
+              includeAllCommits: true
+            },
+            "styles": {},
+            "state": "default"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "3d-procedural-shader-artist",
+    "name": "GLSL Shader & Generative Math Artist",
+    "description": "Raymarching signed distance fields (SDF), fractals, Voronoi noise, WebGL compute post-processing, and demoscene coding.",
+    "category": "Creative & Design",
+    "accent": "#e11d48",
+    "config": {
+      "version": "1.0.0",
+      "title": "GLSL Shader & Generative Math Artist",
+      "settings": {
+        "user": {
+          "github": "octocat",
+          "name": "Shader Alchemist",
+          "role": "Creative Coder & Real-Time GLSL Shader Artist",
+          "bio": "Carving light out of mathematical equations. Raymarching SDFs, procedural textures, and WebGL post-processing shaders.",
+          "location": "Paris, France",
+          "pronouns": "they/them",
+          "status": "Writing a Mandelbulb fractal raymarcher in 4KB"
+        },
+        "theme": "dark",
+        "accentColor": "#e11d48",
+        "badgeStyle": "for-the-badge",
+        "align": "center"
+      },
+      "sections": [
+        {
+          "id": "sec-shader-capsule",
+          "type": "capsule-banner",
+          "props": {
+            "content": {
+              "text": "GENERATIVE GLSL // PROCEDURAL RAYMARCHING",
+              "color": "e11d48",
+              "style": "waving",
+              "animation": "fadeIn"
+            },
+            "styles": {},
+            "state": "default"
+          }
+        },
+        {
+          "id": "sec-shader-stats",
+          "type": "github-readme-stats",
+          "props": {
+            "content": {
+              showIcons: true,
+              "theme": "radical",
+              includeAllCommits: true
+            },
+            "styles": {},
+            "state": "default"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "devops-gitops-argo-flux-core",
+    "name": "GitOps & Continuous Delivery Specialist",
+    "description": "Declarative multi-cluster Kubernetes delivery with ArgoCD, Flux, Helm, Kustomize, and automated rollback canary tests.",
+    "category": "Security & Cloud",
+    "accent": "#059669",
+    "config": {
+      "version": "1.0.0",
+      "title": "GitOps & Continuous Delivery Specialist",
+      "settings": {
+        "user": {
+          "github": "octocat",
+          "name": "GitOps Master",
+          "role": "Continuous Delivery & Multi-Cluster GitOps Engineer",
+          "bio": "Git as the single source of truth. Declarative infrastructure, ArgoCD sync waves, and zero-downtime canary deployments.",
+          "location": "Dublin, Ireland",
+          "pronouns": "he/him",
+          "status": "Reconciling 120 production microservices via ArgoCD"
+        },
+        "theme": "dark",
+        "accentColor": "#059669",
+        "badgeStyle": "for-the-badge",
+        "align": "left"
+      },
+      "sections": [
+        {
+          "id": "sec-gitops-capsule",
+          "type": "capsule-banner",
+          "props": {
+            "content": {
+              "text": "GITOPS // ARGOCD DECLARATIVE INFRASTRUCTURE",
+              "color": "059669",
+              "style": "geometric",
+              "animation": "fadeIn"
+            },
+            "styles": {},
+            "state": "default"
+          }
+        },
+        {
+          "id": "sec-gitops-streak",
+          "type": "github-readme-streak-stats",
+          "props": {
+            "content": {
+              "theme": "tokyonight",
+              hideBorder: false
+            },
+            "styles": {},
+            "state": "default"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "telemetry-sre-incident-commander",
+    "name": "Site Reliability & Incident Commander",
+    "description": "Four golden signals, Prometheus PromQL alerting, OpenTelemetry distributed tracing, and war room mitigation.",
+    "category": "Security & Cloud",
+    "accent": "#dc2626",
+    "config": {
+      "version": "1.0.0",
+      "title": "Site Reliability & Incident Commander",
+      "settings": {
+        "user": {
+          "github": "octocat",
+          "name": "SRE Commander",
+          "role": "Principal SRE & Global Incident Commander",
+          "bio": "Guarding 99.999% availability. High-cardinality distributed tracing, Prometheus alerts, and post-mortem culture.",
+          "location": "New York, NY",
+          "pronouns": "she/her",
+          "status": "Investigating tail-latency spikes across distributed ingress"
+        },
+        "theme": "dark",
+        "accentColor": "#dc2626",
+        "badgeStyle": "for-the-badge",
+        "align": "left"
+      },
+      "sections": [
+        {
+          "id": "sec-sre-typing",
+          "type": "readme-typing-svg",
+          "props": {
+            "content": {
+              "lines": [
+                "Monitoring 4 golden signals: Latency, Traffic, Errors, Saturation...",
+                "OpenTelemetry trace collector active across 500 nodes...",
+                "Global SLA: 99.999% uptime maintained."
+              ],
+              "color": "dc2626",
+              "font": "Fira Code"
+            },
+            "styles": {},
+            "state": "default"
+          }
+        },
+        {
+          "id": "sec-sre-stats",
+          "type": "github-readme-stats",
+          "props": {
+            "content": {
+              showIcons: true,
+              "theme": "dark",
+              includeAllCommits: true
+            },
+            "styles": {},
+            "state": "default"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "frontend-microfrontends-architect",
+    "name": "Enterprise Micro-Frontends & Federation Architect",
+    "description": "Module Federation 2.0, shared vendor singletons, decoupled CI/CD deployment pipelines, and design token contracts.",
+    "category": "Web & Full-Stack",
+    "accent": "#7c3aed",
+    "config": {
+      "version": "1.0.0",
+      "title": "Enterprise Micro-Frontends & Federation Architect",
+      "settings": {
+        "user": {
+          "github": "octocat",
+          "name": "Federation Architect",
+          "role": "Enterprise Micro-Frontends & Architecture Lead",
+          "bio": "Scaling large engineering organizations with Module Federation. Independent releases, isolated runtimes, and shared contracts.",
+          "location": "Tel Aviv, Israel",
+          "pronouns": "he/him",
+          "status": "Federating remote micro-apps with zero runtime friction"
+        },
+        "theme": "dark",
+        "accentColor": "#7c3aed",
+        "badgeStyle": "for-the-badge",
+        "align": "left"
+      },
+      "sections": [
+        {
+          "id": "sec-mfe-capsule",
+          "type": "capsule-banner",
+          "props": {
+            "content": {
+              "text": "MICRO-FRONTENDS // MODULE FEDERATION 2.0",
+              "color": "7c3aed",
+              "style": "waving",
+              "animation": "fadeIn"
+            },
+            "styles": {},
+            "state": "default"
+          }
+        },
+        {
+          "id": "sec-mfe-stats",
+          "type": "github-readme-stats",
+          "props": {
+            "content": {
+              showIcons: true,
+              "theme": "tokyonight",
+              includeAllCommits: true
+            },
+            "styles": {},
+            "state": "default"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "database-internals-storage-engine",
+    "name": "LSM-Tree & Distributed Storage Engine Builder",
+    "description": "Log-structured merge-trees (LSM), write-ahead logs (WAL), bloom filters, SSTables, and Raft consensus protocols.",
+    "category": "Systems & Low-Level",
+    "accent": "#b45309",
+    "config": {
+      "version": "1.0.0",
+      "title": "LSM-Tree & Distributed Storage Engine Builder",
+      "settings": {
+        "user": {
+          "github": "octocat",
+          "name": "Storage Engine Hacker",
+          "role": "Database Internals & Distributed Storage Engineer",
+          "bio": "Writing database engines from scratch. LSM-trees, RocksDB compaction strategies, lock-free B-trees, and Raft quorum.",
+          "location": "Hangzhou, China",
+          "pronouns": "he/him",
+          "status": "Benchmarking WAL fsync throughput on NVMe drives"
+        },
+        "theme": "dark",
+        "accentColor": "#b45309",
+        "badgeStyle": "for-the-badge",
+        "align": "left"
+      },
+      "sections": [
+        {
+          "id": "sec-storage-capsule",
+          "type": "capsule-banner",
+          "props": {
+            "content": {
+              "text": "DATABASE INTERNALS // LSM-TREES & RAFT",
+              "color": "b45309",
+              "style": "geometric",
+              "animation": "fadeIn"
+            },
+            "styles": {},
+            "state": "default"
+          }
+        },
+        {
+          "id": "sec-storage-stats",
+          "type": "github-readme-stats",
+          "props": {
+            "content": {
+              showIcons: true,
+              "theme": "highcontrast",
+              includeAllCommits: true
+            },
+            "styles": {},
+            "state": "default"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "mlops-feature-store-specialist",
+    "name": "MLOps Feature Store & Model Registry Lead",
+    "description": "Feast feature store, automated data drift alerts, Ray distributed training clusters, and Triton inference servers.",
+    "category": "AI & Data",
+    "accent": "#0d9488",
+    "config": {
+      "version": "1.0.0",
+      "title": "MLOps Feature Store & Model Registry Lead",
+      "settings": {
+        "user": {
+          "github": "octocat",
+          "name": "MLOps Engineer",
+          "role": "Staff MLOps Architect & Feature Store Lead",
+          "bio": "Bridging research notebooks to production at scale. Automated data drift detection, Ray clusters, and Triton serving.",
+          "location": "Bengaluru, India",
+          "pronouns": "she/her",
+          "status": "Serving 50,000 req/sec inference on TensorRT-LLM"
+        },
+        "theme": "dark",
+        "accentColor": "#0d9488",
+        "badgeStyle": "for-the-badge",
+        "align": "left"
+      },
+      "sections": [
+        {
+          "id": "sec-mlops-capsule",
+          "type": "capsule-banner",
+          "props": {
+            "content": {
+              "text": "MLOPS ENGINE // FEATURE STORE & SERVING",
+              "color": "0d9488",
+              "style": "waving",
+              "animation": "fadeIn"
+            },
+            "styles": {},
+            "state": "default"
+          }
+        },
+        {
+          "id": "sec-mlops-stats",
+          "type": "github-readme-stats",
+          "props": {
+            "content": {
+              showIcons: true,
+              "theme": "tokyonight",
+              includeAllCommits: true
+            },
+            "styles": {},
+            "state": "default"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "cyber-monkey-dj-station",
+    "name": "Cyber Monkey Live DJ & Synthwave Station",
+    "description": "Futuristic cyberpunk monkey mascot with dual turntables, neon equalizer audio visualizer, and live music telemetry.",
+    "category": "Creative & Design",
+    "accent": "#ffe600",
+    "config": {
+      "version": "1.0.0",
+      "title": "Cyber Monkey Live DJ & Synthwave Station",
+      "settings": {
+        "user": {
+          "github": "octocat",
+          "name": "Neon DJ Monkey",
+          "role": "Creative Audio Programmer & Synthwave Producer",
+          "bio": "Spinning cybernetic frequencies, Web Audio API synthesizers, and real-time audio visualizers. Zero monkey business.",
+          "location": "Neo Shibuya, Metaverse",
+          "pronouns": "they/them",
+          "status": "Broadcasting live 140BPM synthwave studio mix"
+        },
+        "theme": "dark",
+        "accentColor": "#ffe600",
+        "badgeStyle": "for-the-badge",
+        "align": "center"
+      },
+      "sections": [
+        {
+          "id": "sec-dj-mascot",
+          "type": "mascot-bio",
+          "props": {
+            "content": {
+              "theme": "cyber-dj",
+              "greeting": "Dropping the beat. 100% Camo safe 60fps audio stream.",
+              "speed": "normal"
+            },
+            "styles": {},
+            "state": "default"
+          }
+        },
+        {
+          "id": "sec-dj-snake",
+          "type": "snk",
+          "props": {
+            "content": {
+              "colorDots": "#18181b,#ffe600,#38bdf8,#a855f7",
+              "colorSnake": "#ffe600"
+            },
+            "styles": {},
+            "state": "default"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "pixel-desk-coffee-coder",
+    "name": "Pixel Dual-Monitor Desk & Coffee Streamer",
+    "description": "Cozy 16-bit retro workstation with rising coffee steam, dual monitors, matrix green code rain, and relaxing cat.",
+    "category": "Creative & Design",
+    "accent": "#10b981",
+    "config": {
+      "version": "1.0.0",
+      "title": "Pixel Dual-Monitor Desk & Coffee Streamer",
+      "settings": {
+        "user": {
+          "github": "octocat",
+          "name": "Pixel Craftsman",
+          "role": "Full-Stack Web Dev & Indie Game Creator",
+          "bio": "Coding cozy games, responsive apps, and retro pixel art. Fuelled by espresso and 16-bit chiptune beats.",
+          "location": "Tokyo, Japan",
+          "pronouns": "he/him",
+          "status": "Brewing fresh single-origin espresso at desk"
+        },
+        "theme": "dark",
+        "accentColor": "#10b981",
+        "badgeStyle": "for-the-badge",
+        "align": "center"
+      },
+      "sections": [
+        {
+          "id": "sec-pixel-desk-banner",
+          "type": "capsule-banner",
+          "props": {
+            "content": {
+              "text": "COZY PIXEL DESK // ESPRESSO & CODE",
+              "color": "10b981",
+              "style": "waving",
+              "animation": "fadeIn"
+            },
+            "styles": {},
+            "state": "default"
+          }
+        },
+        {
+          "id": "sec-pixel-desk-trophy",
+          "type": "github-profile-trophy",
+          "props": {
+            "content": {
+              "theme": "flat",
+              "column": 6,
+              "row": 1
+            },
+            "styles": {},
+            "state": "default"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "ninja-shadow-katana-coder",
+    "name": "Ninja Shadow & Katana Glint Blade",
+    "description": "Stealthy ninja in combat stance, fluttering crimson headband, and gleaming katana with subtle lighting reflections.",
+    "category": "Security & Cloud",
+    "accent": "#ef4444",
+    "config": {
+      "version": "1.0.0",
+      "title": "Ninja Shadow & Katana Glint Blade",
+      "settings": {
+        "user": {
+          "github": "octocat",
+          "name": "Shadow Striker",
+          "role": "Red Team Lead & Exploit Defense Ninja",
+          "bio": "Striking vulnerabilities in silence. Zero-day discovery, kernel exploitation, and automated defensive counter-measures.",
+          "location": "Shadow Realm",
+          "pronouns": "he/him",
+          "status": "Polishing precision zero-day detection blade"
+        },
+        "theme": "dark",
+        "accentColor": "#ef4444",
+        "badgeStyle": "for-the-badge",
+        "align": "left"
+      },
+      "sections": [
+        {
+          "id": "sec-ninja-typing",
+          "type": "readme-typing-svg",
+          "props": {
+            "content": {
+              "lines": [
+                "Vanishing into memory space without a trace...",
+                "Slicing through memory corruptions with katana precision...",
+                "Target acquired. System secured."
+              ],
+              "color": "ef4444",
+              "font": "Fira Code"
+            },
+            "styles": {},
+            "state": "default"
+          }
+        },
+        {
+          "id": "sec-ninja-stats",
+          "type": "github-readme-stats",
+          "props": {
+            "content": {
+              showIcons: true,
+              "theme": "blood",
+              includeAllCommits: true
+            },
+            "styles": {},
+            "state": "default"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "builder-craftsman-smith",
+    "name": "Tech Blocks Crafter & Anvil Forge",
+    "description": "Animated builder hero swinging a heavy hammer onto an anvil with bouncing sparks and stacking glowing tech blocks.",
+    "category": "Web & Full-Stack",
+    "accent": "#f59e0b",
+    "config": {
+      "version": "1.0.0",
+      "title": "Tech Blocks Crafter & Anvil Forge",
+      "settings": {
+        "user": {
+          "github": "octocat",
+          "name": "Forge Craftsman",
+          "role": "Staff Platform Engineer & Systems Crafter",
+          "bio": "Forging robust developer infrastructure from bedrock. Stacking reliable modules with hammer and sparks.",
+          "location": "Denver, CO",
+          "pronouns": "he/him",
+          "status": "Forging resilient microservices on the anvil"
+        },
+        "theme": "dark",
+        "accentColor": "#f59e0b",
+        "badgeStyle": "for-the-badge",
+        "align": "left"
+      },
+      "sections": [
+        {
+          "id": "sec-builder-capsule",
+          "type": "capsule-banner",
+          "props": {
+            "content": {
+              "text": "MONOFORGE // PRECISION CODE CRAFTING",
+              "color": "f59e0b",
+              "style": "geometric",
+              "animation": "fadeIn"
+            },
+            "styles": {},
+            "state": "default"
+          }
+        },
+        {
+          "id": "sec-builder-streak",
+          "type": "github-readme-streak-stats",
+          "props": {
+            "content": {
+              "theme": "tokyonight",
+              hideBorder: false
+            },
+            "styles": {},
+            "state": "default"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "wizard-arcane-runic-mage",
+    "name": "Arcane Spellcaster & Floating Orb Mage",
+    "description": "Mythical wizard with pulsating crystal staff, rotating runic rings, floating orbs, and flowing mystical robe hem.",
+    "category": "Creative & Design",
+    "accent": "#8b5cf6",
+    "config": {
+      "version": "1.0.0",
+      "title": "Arcane Spellcaster & Floating Orb Mage",
+      "settings": {
+        "user": {
+          "github": "octocat",
+          "name": "Arcane Conjurer",
+          "role": "Algorithm Wizard & Spellbinding Software Mage",
+          "bio": "Transforming abstract mathematical formulas into reality with code spells, runic logic, and glowing algorithms.",
+          "location": "Tower of High Sorcery",
+          "pronouns": "they/them",
+          "status": "Incanting ancient compiler optimization runes"
+        },
+        "theme": "dark",
+        "accentColor": "#8b5cf6",
+        "badgeStyle": "for-the-badge",
+        "align": "center"
+      },
+      "sections": [
+        {
+          "id": "sec-wizard-capsule",
+          "type": "capsule-banner",
+          "props": {
+            "content": {
+              "text": "ARCANE MAGE // ALGORITHMIC SORCERY",
+              "color": "8b5cf6",
+              "style": "waving",
+              "animation": "fadeIn"
+            },
+            "styles": {},
+            "state": "default"
+          }
+        },
+        {
+          "id": "sec-wizard-trophy",
+          "type": "github-profile-trophy",
+          "props": {
+            "content": {
+              "theme": "matrix",
+              "column": 6,
+              "row": 1
+            },
+            "styles": {},
+            "state": "default"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "matrix-green-cyber-runner",
+    "name": "Matrix Cyber Runner & Terminal Stream",
+    "description": "Cascading phosphor green matrix rain, CRT scanlines, terminal cursor ticker, and hacker telemetry.",
+    "category": "Systems & Low-Level",
+    "accent": "#22c55e",
+    "config": {
+      "version": "1.0.0",
+      "title": "Matrix Cyber Runner & Terminal Stream",
+      "settings": {
+        "user": {
+          "github": "octocat",
+          "name": "Neo Runner",
+          "role": "Cyberspace Infiltrator & Terminal Stream Specialist",
+          "bio": "Living inside the digital phosphor stream. Decrypting networks, raw socket hacking, and green CRT streams.",
+          "location": "Zion Mainframe",
+          "pronouns": "he/him",
+          "status": "Jacked into the matrix data highway"
+        },
+        "theme": "dark",
+        "accentColor": "#22c55e",
+        "badgeStyle": "for-the-badge",
+        "align": "left"
+      },
+      "sections": [
+        {
+          "id": "sec-matrix-typing",
+          "type": "readme-typing-svg",
+          "props": {
+            "content": {
+              "lines": [
+                "Wake up, Neo...",
+                "The Matrix has you...",
+                "Follow the white rabbit."
+              ],
+              "color": "22c55e",
+              "font": "Fira Code"
+            },
+            "styles": {},
+            "state": "default"
+          }
+        },
+        {
+          "id": "sec-matrix-stats",
+          "type": "github-readme-stats",
+          "props": {
+            "content": {
+              showIcons: true,
+              "theme": "matrix",
+              includeAllCommits: true
+            },
+            "styles": {},
+            "state": "default"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "synthwave-80s-delorean-grid",
+    "name": "Outrun DeLorean & Neon Grid",
+    "description": "80s retro sunset, wireframe neon perspective grid, chrome typography sweep, and nostalgic outrun aesthetic.",
+    "category": "Creative & Design",
+    "accent": "#f43f5e",
+    "config": {
+      "version": "1.0.0",
+      "title": "Outrun DeLorean & Neon Grid",
+      "settings": {
+        "user": {
+          "github": "octocat",
+          "name": "Neon Rider",
+          "role": "Retro Outrun Coder & Synthwave Enthusiast",
+          "bio": "Speeding at 88mph down the neon highway. Retro aesthetics, vintage synthesizers, and modern code velocity.",
+          "location": "Miami Vice, 1984",
+          "pronouns": "he/him",
+          "status": "Cruising along the digital sunset horizon"
+        },
+        "theme": "dark",
+        "accentColor": "#f43f5e",
+        "badgeStyle": "for-the-badge",
+        "align": "center"
+      },
+      "sections": [
+        {
+          "id": "sec-outrun-capsule",
+          "type": "capsule-banner",
+          "props": {
+            "content": {
+              "text": "OUTRUN 1984 // SYNTHWAVE & NEON GRIDS",
+              "color": "f43f5e",
+              "style": "waving",
+              "animation": "fadeIn"
+            },
+            "styles": {},
+            "state": "default"
+          }
+        },
+        {
+          "id": "sec-outrun-stats",
+          "type": "github-readme-stats",
+          "props": {
+            "content": {
+              showIcons: true,
+              "theme": "synthwave",
+              includeAllCommits: true
+            },
+            "styles": {},
+            "state": "default"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "solar-punk-clean-tech-dev",
+    "name": "Solarpunk Clean Energy & Microgrid Coder",
+    "description": "Renewable solar grid controllers, decentralized battery energy storage, and optimistic green technology.",
+    "category": "Web & Full-Stack",
+    "accent": "#84cc16",
+    "config": {
+      "version": "1.0.0",
+      "title": "Solarpunk Clean Energy & Microgrid Coder",
+      "settings": {
+        "user": {
+          "github": "octocat",
+          "name": "Solar Architect",
+          "role": "Clean Energy Systems & Solarpunk Software Engineer",
+          "bio": "Building a bright, high-tech, ecological future. Microgrid balancing algorithms, IoT solar inverters, and battery tech.",
+          "location": "Freiburg, Germany",
+          "pronouns": "she/her",
+          "status": "Balancing local solar community battery microgrid"
+        },
+        "theme": "light",
+        "accentColor": "#84cc16",
+        "badgeStyle": "for-the-badge",
+        "align": "left"
+      },
+      "sections": [
+        {
+          "id": "sec-solar-capsule",
+          "type": "capsule-banner",
+          "props": {
+            "content": {
+              "text": "SOLARPUNK // CLEAN ENERGY & MICROGRIDS",
+              "color": "84cc16",
+              "style": "geometric",
+              "animation": "fadeIn"
+            },
+            "styles": {},
+            "state": "default"
+          }
+        },
+        {
+          "id": "sec-solar-stats",
+          "type": "github-readme-stats",
+          "props": {
+            "content": {
+              showIcons: true,
+              "theme": "gruvbox",
+              includeAllCommits: true
+            },
+            "styles": {},
+            "state": "default"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "space-satellite-aerospace-dev",
+    "name": "Aerospace Flight Software & Satellite Telemetry",
+    "description": "CubeSat flight computers, orbit propagation orbital mechanics, radiation-tolerant telemetry, and ground stations.",
+    "category": "Systems & Low-Level",
+    "accent": "#38bdf8",
+    "config": {
+      "version": "1.0.0",
+      "title": "Aerospace Flight Software & Satellite Telemetry",
+      "settings": {
+        "user": {
+          "github": "octocat",
+          "name": "Cosmic Pilot",
+          "role": "Satellite Flight Software & Orbital Telemetry Engineer",
+          "bio": "Guiding spacecraft across low-Earth orbit. CubeSat flight systems, CCSDS telemetry packets, and orbital dynamics.",
+          "location": "Houston, TX",
+          "pronouns": "they/them",
+          "status": "Acquiring X-band downlink signal pass over ground station"
+        },
+        "theme": "dark",
+        "accentColor": "#38bdf8",
+        "badgeStyle": "for-the-badge",
+        "align": "left"
+      },
+      "sections": [
+        {
+          "id": "sec-space-capsule",
+          "type": "capsule-banner",
+          "props": {
+            "content": {
+              "text": "AEROSPACE // SATELLITE ORBITAL TELEMETRY",
+              "color": "38bdf8",
+              "style": "geometric",
+              "animation": "fadeIn"
+            },
+            "styles": {},
+            "state": "default"
+          }
+        },
+        {
+          "id": "sec-space-streak",
+          "type": "github-readme-streak-stats",
+          "props": {
+            "content": {
+              "theme": "tokyonight",
+              hideBorder: false
+            },
+            "styles": {},
+            "state": "default"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "quantum-cryptography-postquantum",
+    "name": "Post-Quantum Cryptography & Lattice Math",
+    "description": "NIST post-quantum standards, ML-KEM (Kyber), ML-DSA (Dilithium), lattice cryptography, and quantum-resistant key exchanges.",
+    "category": "Security & Cloud",
+    "accent": "#6366f1",
+    "config": {
+      "version": "1.0.0",
+      "title": "Post-Quantum Cryptography & Lattice Math",
+      "settings": {
+        "user": {
+          "github": "octocat",
+          "name": "Lattice Cryptographer",
+          "role": "Post-Quantum Cryptography (PQC) & Lattice Specialist",
+          "bio": "Protecting tomorrow's web from quantum decrypters. ML-KEM, ML-DSA, learning-with-errors (LWE) lattice hardness.",
+          "location": "Waterloo, Canada",
+          "pronouns": "she/her",
+          "status": "Benchmarking constant-time AVX-512 lattice polynomial NTT"
+        },
+        "theme": "dark",
+        "accentColor": "#6366f1",
+        "badgeStyle": "for-the-badge",
+        "align": "left"
+      },
+      "sections": [
+        {
+          "id": "sec-pqc-capsule",
+          "type": "capsule-banner",
+          "props": {
+            "content": {
+              "text": "POST-QUANTUM CRYPTOGRAPHY // ML-KEM & ML-DSA",
+              "color": "6366f1",
+              "style": "geometric",
+              "animation": "fadeIn"
+            },
+            "styles": {},
+            "state": "default"
+          }
+        },
+        {
+          "id": "sec-pqc-stats",
+          "type": "github-readme-stats",
+          "props": {
+            "content": {
+              showIcons: true,
+              "theme": "tokyonight",
+              includeAllCommits: true
+            },
+            "styles": {},
+            "state": "default"
+          }
+        }
+      ]
+    }
+  }
 ];
 
 export const TEMPLATES: TemplateItem[] = RAW_TEMPLATES.map(t => ({

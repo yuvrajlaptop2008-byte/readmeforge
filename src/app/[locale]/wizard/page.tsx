@@ -1,16 +1,30 @@
 'use client';
 
-import { Suspense, useState } from 'react';
+import { Suspense, useState, useEffect } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { TopNav } from '#/components/navigation/TopNav';
 import { WizardContainer } from '#/components/wizard';
 import { CanvasTemplate } from '#/components/templates/canvas';
+import { WizardSkeleton } from '#/components/wizard/WizardSkeleton';
+import { useReadmeStore } from '#/store/useReadmeStore';
+import { TEMPLATES } from '#/lib/templates/catalog';
 import { LayoutDashboard, ListOrdered, Sparkles } from 'lucide-react';
 
 function WizardContent() {
   const searchParams = useSearchParams();
+  const setEntireConfig = useReadmeStore(state => state.setEntireConfig);
   const initialMode = searchParams?.get('mode') === 'guided' ? 'guided' : 'canvas';
   const [studioMode, setStudioMode] = useState<'canvas' | 'guided'>(initialMode);
+
+  useEffect(() => {
+    const templateParam = searchParams?.get('template');
+    if (templateParam) {
+      const found = TEMPLATES.find(t => t.id === templateParam);
+      if (found) {
+        setEntireConfig(found.config);
+      }
+    }
+  }, [searchParams, setEntireConfig]);
 
   return (
     <div className="min-h-screen bg-white text-neutral-950 flex flex-col font-sans selection:bg-[#ffe600] selection:text-neutral-950">
@@ -66,13 +80,7 @@ function WizardContent() {
 
 export default function WizardPage() {
   return (
-    <Suspense
-      fallback={
-        <div className="min-h-screen bg-white text-neutral-950 flex items-center justify-center text-xs font-mono">
-          Loading Visual Studio...
-        </div>
-      }
-    >
+    <Suspense fallback={<WizardSkeleton />}>
       <WizardContent />
     </Suspense>
   );

@@ -119,7 +119,7 @@ export function CuratedArchetypes() {
 
               <div className="pt-6 mt-6 border-t-2 border-neutral-900 flex items-center justify-between">
                 <Link
-                  href="/wizard"
+                  href={`/wizard?template=${arch.id}`}
                   className="px-3.5 py-2 rounded-xl bg-[#ffe600] text-neutral-950 text-xs font-mono font-black border-2 border-neutral-900 shadow-[2px_2px_0px_#18181b] hover:bg-[#ffdf00] inline-flex items-center gap-1.5 transition-all btn-tactile"
                 >
                   <span>Use Template</span>
@@ -127,7 +127,7 @@ export function CuratedArchetypes() {
                 </Link>
 
                 <Link
-                  href="/developer"
+                  href={`/developer?template=${arch.id}`}
                   className="p-2 rounded-xl bg-white hover:bg-neutral-100 text-neutral-950 border-2 border-neutral-900 shadow-[2px_2px_0px_#18181b] transition-all"
                   title="Edit in Monaco Raw Mode"
                 >
@@ -145,7 +145,7 @@ export function CuratedArchetypes() {
             onClick={() => setShowAllTemplates(!showAllTemplates)}
             className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-2xl bg-white hover:bg-[#ffe600] text-neutral-950 font-mono text-xs sm:text-sm font-black border-2 border-neutral-900 shadow-[4px_4px_0px_#18181b] hover:shadow-[2px_2px_0px_#18181b] hover:translate-x-[2px] hover:translate-y-[2px] transition-all cursor-pointer btn-tactile"
           >
-            <span>{showAllTemplates ? '▲ COLLAPSE ARCHETYPE VAULT' : '▼ EXPLORE ALL 50+ ARCHETYPES WITH LIVE SEARCH & PREVIEW'}</span>
+            <span>{showAllTemplates ? '▲ COLLAPSE ARCHETYPE VAULT' : '▼ EXPLORE ALL 85+ ARCHETYPES WITH LIVE SEARCH & PREVIEW'}</span>
           </button>
         </div>
 
